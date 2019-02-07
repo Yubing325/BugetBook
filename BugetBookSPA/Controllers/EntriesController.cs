@@ -9,7 +9,7 @@ using System.Web.Http.Cors;
 
 namespace BugetBookSPA.Controllers
 {
-    [EnableCors("http://localhost:4200/","*","*")]
+    [EnableCors(origins:"http://localhost:4200", headers: "*", methods: "*")]
     public class EntriesController : ApiController
     {
         [HttpGet]
