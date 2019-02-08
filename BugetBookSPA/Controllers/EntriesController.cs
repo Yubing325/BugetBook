@@ -1,4 +1,5 @@
 ﻿using BugetBookSPA.Data;
+using BugetBookSPA.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,28 @@ namespace BugetBookSPA.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpPost]
+        public IHttpActionResult PostEntries([FromBody]Entry entry)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            try
+            {
+                using (var context = new AppDbContext())
+                {
+                    context.Entries.Add(entry);
+                    context.SaveChanges();
+
+                    return Ok("Entry is created!");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
         }
     }
 }
