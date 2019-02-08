@@ -12,3 +12,8 @@ A Single Page Application to keep tracking of personal expense and income using 
 
 * Framework: Angular 7  Bootstrap 3.3.7
 * Languages: TypeScript, HTML5/CSS3
+
+## Sturcture:
+
+Entries list
+Entries Create
