@@ -14,10 +14,8 @@ A Single Page Application to keep tracking of personal expense and income using 
 
 * Languages: TypeScript, HTML5/CSS3
 
-## Sturcture:
+## Demo
 
-Entries list
-Entries Create
-
+![Demo](/Screenshot.jpg)
 
 
